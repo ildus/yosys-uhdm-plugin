@@ -38,6 +38,8 @@ set(YOSYS_PLUGINS_DIR ${YOSYS_DATADIR}/plugins)
 set(CMAKE_CXX_FLAGS ${YOSYS_CXXFLAGS})
 
 add_library(uhdm SHARED ${src})
+set_target_properties(uhdm PROPERTIES PREFIX "")
+
 target_include_directories(uhdm PRIVATE
 	/home/ildus/dev/yosys
 )
